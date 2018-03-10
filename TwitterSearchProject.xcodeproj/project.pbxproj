@@ -15,6 +15,8 @@
 		7C8D429D2053E59A000CCCD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C8D429B2053E59A000CCCD4 /* LaunchScreen.storyboard */; };
 		7C8D42A82053E59A000CCCD4 /* TwitterSearchProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8D42A72053E59A000CCCD4 /* TwitterSearchProjectTests.swift */; };
 		7C8D42B32053E59A000CCCD4 /* TwitterSearchProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8D42B22053E59A000CCCD4 /* TwitterSearchProjectUITests.swift */; };
+		7C8D42C22053E76C000CCCD4 /* SearchedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8D42C12053E76C000CCCD4 /* SearchedViewController.swift */; };
+		7C8D42C42053E832000CCCD4 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8D42C32053E832000CCCD4 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		7C8D42AE2053E59A000CCCD4 /* TwitterSearchProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitterSearchProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C8D42B22053E59A000CCCD4 /* TwitterSearchProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterSearchProjectUITests.swift; sourceTree = "<group>"; };
 		7C8D42B42053E59A000CCCD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C8D42C12053E76C000CCCD4 /* SearchedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedViewController.swift; sourceTree = "<group>"; };
+		7C8D42C32053E832000CCCD4 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		7C8D428E2053E59A000CCCD4 /* TwitterSearchProject */ = {
 			isa = PBXGroup;
 			children = (
+				7C8D42C02053E74D000CCCD4 /* MainVC */,
 				7C8D428F2053E59A000CCCD4 /* AppDelegate.swift */,
 				7C8D42912053E59A000CCCD4 /* ViewController.swift */,
 				7C8D42932053E59A000CCCD4 /* Main.storyboard */,
@@ -126,6 +131,15 @@
 				7C8D42B42053E59A000CCCD4 /* Info.plist */,
 			);
 			path = TwitterSearchProjectUITests;
+			sourceTree = "<group>";
+		};
+		7C8D42C02053E74D000CCCD4 /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				7C8D42C12053E76C000CCCD4 /* SearchedViewController.swift */,
+				7C8D42C32053E832000CCCD4 /* TableViewCell.swift */,
+			);
+			path = MainVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C8D42C42053E832000CCCD4 /* TableViewCell.swift in Sources */,
 				7C8D42982053E59A000CCCD4 /* TwitterSearchProject.xcdatamodeld in Sources */,
+				7C8D42C22053E76C000CCCD4 /* SearchedViewController.swift in Sources */,
 				7C8D42922053E59A000CCCD4 /* ViewController.swift in Sources */,
 				7C8D42902053E59A000CCCD4 /* AppDelegate.swift in Sources */,
 			);
@@ -430,11 +446,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TwitterSearchProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PiancaSiri.TwitterSearchProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -444,11 +463,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TwitterSearchProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PiancaSiri.TwitterSearchProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -1,24 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Searched View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SearchedViewController" customModule="TwitterSearchProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start Your Search Here.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CRa-MO-usj">
+                                <rect key="frame" x="0.0" y="20" width="375" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="fWj-pz-yfn"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="STz-u2-syY"/>
+                                </connections>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jxf-mh-Z1F">
+                                <rect key="frame" x="0.0" y="99" width="375" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ch5-lm-QN7"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Bv1-cc-jHU"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seacrhed Results ." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZP4-5F-twp">
+                                <rect key="frame" x="1" y="73" width="374" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="yxu-ga-hZ9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZP4-5F-twp" secondAttribute="trailing" id="7zv-eJ-rup"/>
+                            <constraint firstItem="Jxf-mh-Z1F" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Fri-NC-nVv"/>
+                            <constraint firstItem="CRa-MO-usj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="MJz-oR-nbM"/>
+                            <constraint firstItem="CRa-MO-usj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Vf7-bV-9h3"/>
+                            <constraint firstItem="CRa-MO-usj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WzB-9K-GPx"/>
+                            <constraint firstItem="Jxf-mh-Z1F" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="epR-Cu-XeB"/>
+                            <constraint firstItem="ZP4-5F-twp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="1" id="jO4-Th-bvE"/>
+                            <constraint firstItem="Jxf-mh-Z1F" firstAttribute="top" secondItem="CRa-MO-usj" secondAttribute="bottom" constant="34" id="sDA-4m-JMD"/>
+                            <constraint firstItem="ZP4-5F-twp" firstAttribute="top" secondItem="CRa-MO-usj" secondAttribute="bottom" constant="8" id="vf9-rK-Rey"/>
+                            <constraint firstItem="Jxf-mh-Z1F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wcz-Os-PYu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="SearchTF" destination="CRa-MO-usj" id="GFd-tB-k7t"/>
+                        <outlet property="objShowingResultLbl" destination="ZP4-5F-twp" id="A6K-xz-Cp4"/>
+                        <outlet property="objTblVw" destination="Jxf-mh-Z1F" id="mze-Oj-p6T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
