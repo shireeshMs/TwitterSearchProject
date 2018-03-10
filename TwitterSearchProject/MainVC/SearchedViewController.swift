@@ -24,16 +24,17 @@ class SearchedViewController: UIViewController,UITableViewDelegate,UITableViewDa
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        shoppingList = ["Eggs","Fruits","milk","Rice","Vegetables","Milk","oil","apple","pear","banana",
-        "raspberry"]
         //you can place dynamic data instead of this
         // Do any additional setup after loading the view.
     }
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool{
-        filtered = shoppingList.filter({ (text) -> Bool in
-            let tmp: NSString = text as! NSString
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        var searchText = textField.text
+        filtered = data.filter({ (text) -> Bool in
+            let tmp: NSString = text as NSString
+            let range = tmp.range(of: searchText!, options: NSString.CompareOptions.caseInsensitive)
             return range.location != NSNotFound
-        }) as! [String]
+        })
         if(filtered.count == 0){
             searchActive = false;
         } else {
@@ -42,7 +43,6 @@ class SearchedViewController: UIViewController,UITableViewDelegate,UITableViewDa
         objTblVw.reloadData()
         return true
     }
-    
    
     override func didReceiveMemoryWarning()
     {
