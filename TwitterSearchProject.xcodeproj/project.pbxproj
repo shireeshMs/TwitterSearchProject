@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C4D56BD20545BD100310CCC /* ObjTableVWCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4D56BC20545BD100310CCC /* ObjTableVWCell.swift */; };
 		7C8D42902053E59A000CCCD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8D428F2053E59A000CCCD4 /* AppDelegate.swift */; };
 		7C8D42922053E59A000CCCD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8D42912053E59A000CCCD4 /* ViewController.swift */; };
 		7C8D42952053E59A000CCCD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C8D42932053E59A000CCCD4 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C4D56BC20545BD100310CCC /* ObjTableVWCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjTableVWCell.swift; sourceTree = "<group>"; };
 		7C8D428C2053E59A000CCCD4 /* TwitterSearchProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterSearchProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C8D428F2053E59A000CCCD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C8D42912053E59A000CCCD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			children = (
 				7C8D42C12053E76C000CCCD4 /* SearchedViewController.swift */,
 				7C8D42C32053E832000CCCD4 /* TableViewCell.swift */,
+				7C4D56BC20545BD100310CCC /* ObjTableVWCell.swift */,
 			);
 			path = MainVC;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				7C8D42C42053E832000CCCD4 /* TableViewCell.swift in Sources */,
 				7C8D42982053E59A000CCCD4 /* TwitterSearchProject.xcdatamodeld in Sources */,
 				7C8D42C22053E76C000CCCD4 /* SearchedViewController.swift in Sources */,
+				7C4D56BD20545BD100310CCC /* ObjTableVWCell.swift in Sources */,
 				7C8D42922053E59A000CCCD4 /* ViewController.swift in Sources */,
 				7C8D42902053E59A000CCCD4 /* AppDelegate.swift in Sources */,
 			);
