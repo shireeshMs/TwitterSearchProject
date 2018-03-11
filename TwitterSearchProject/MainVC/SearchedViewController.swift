@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class SearchedViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate
 {
 
@@ -16,6 +17,7 @@ class SearchedViewController: UIViewController,UITableViewDelegate,UITableViewDa
     @IBOutlet weak var objTblVw: UITableView!
     
     @IBOutlet weak var objShowingResultLbl: UILabel!
+
     var searchActive : Bool = false
     var data = ["San Francisco","New York","San Jose","Chicago","Los Angeles","Austin","Seattle"]
     var filtered:[String] = []
@@ -72,5 +74,7 @@ class SearchedViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
         return cell
     }
+
+    
 
 }
